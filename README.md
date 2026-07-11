@@ -1,4 +1,4 @@
-# NETWORK-FUNDAMENTAL
+# NETWORK FUNDAMENTAL
 a basic network fundamental based on CCNA 200-301
 
 This project simulates a small enterprise environment. It includes essential network services such as DHCP, DNS, HTTP, TFTP, Wireless Access, and more providing a practical foundation for understanding enterprise networking.
@@ -10,16 +10,6 @@ This project simulates a small enterprise environment. It includes essential net
 - Introduction
 - What is Computer Networking?
 - What is Cisco CCNA 200-301?
-- Project Objectives
-- Enterprise Network Overview
-- Network Topology
-- IP Addressing Scheme
-- Network Devices
-- Network Services
-- Configuration Summary
-- Verification
-- Skills Demonstrated
-- Repository Structure
 
 ---
 
