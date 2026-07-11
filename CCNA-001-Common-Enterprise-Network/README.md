@@ -192,13 +192,13 @@ CCNA-001-Common-Enterprise-Network
 │   ├── switch1.txt
 │   └── switch2.txt
 │
-├── screenshots
-│   ├── topology.png
-│   ├── dhcp-test.png
-│   ├── dns-test.png
-│   ├── web-server.png
-│   └── tftp-backup.png
-│
-└── docs
+└── screenshots
+    ├── topology.png
+    ├── dhcp-test.png
+    ├── dns-test.png
+    ├── web-server.png
+    └── tftp-backup.png
+
+
 
 ```
