@@ -1,0 +1,81 @@
+==================================================
+Device : SW1
+Role   : Access Switch (LAN 1)
+Purpose: Provides Layer 2 connectivity for user devices
+         and serves as the management switch for LAN 1.
+==================================================
+
+enable
+# Enter Privileged EXEC mode.
+
+configure terminal
+# Enter Global Configuration mode.
+
+hostname SW1
+# Set the device hostname to "SW1".
+
+no ip domain-lookup
+# Disable DNS lookup to prevent delays caused by mistyped commands.
+
+interface vlan 1
+# Access the management interface (SVI) for VLAN 1.
+
+ ip address 192.168.1.2 255.255.255.0
+# Assign the management IP address.
+
+ no shutdown
+# Activate the management interface.
+
+exit
+# Return to Global Configuration mode.
+
+ip default-gateway 192.168.1.1
+# Configure the default gateway so the switch can communicate
+# with devices outside its local subnet.
+
+end
+# Exit Configuration mode.
+
+copy running-config startup-config
+# Save the running configuration to NVRAM so it persists
+# after a reboot.
+
+
+# NOTE: Complete the basic network configuration and verify connectivity
+# before proceeding with the TFTP backup section.
+
+==================================================
+TFTP Backup
+==================================================
+
+copy running-config tftp
+# Copy the current running configuration to the TFTP server.
+
+Address or name of remote host []? 192.168.2.20
+# Enter the IP address of the TFTP server.
+
+Destination filename [SW1-confg]? SW1-CONFIG
+# Specify the filename that will be stored on the TFTP server.
+
+==================================================
+Flash (IOS) Backup
+==================================================
+
+dir flash:
+# Display the contents of the flash memory.
+# This verifies the IOS image filename before backing it up.
+
+copy flash: tftp
+# Copy the Cisco IOS image stored in flash memory to the TFTP server.
+
+Source filename []? c2950-i6q4l2-mz.121-22.EA4.bin
+# Enter the IOS image filename exactly as shown by 'dir flash:'.
+
+Address or name of remote host []? 192.168.2.20
+# Enter the IP address of the TFTP server.
+
+Destination filename [c2950-i6q4l2-mz.121-22.EA4.bin]?
+# Press Enter to keep the original filename,
+# or specify a different filename if desired.
+
+# The IOS image is now backed up to the TFTP server.

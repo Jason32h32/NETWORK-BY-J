@@ -1,0 +1,90 @@
+==================================================
+Project : CCNA-001 Common Enterprise Topology
+Device  : R1
+Role    : Enterprise Router
+Purpose : Connects LAN 1 and LAN 2 and acts as the
+          default gateway for both networks.
+==================================================
+
+enable
+# Enter Privileged EXEC mode.
+
+configure terminal
+# Enter Global Configuration mode.
+
+hostname R1
+# Set the device hostname to "R1".
+
+no ip domain-lookup
+# Disable DNS lookup to prevent delays caused by mistyped commands.
+
+interface gigabitEthernet 0/1
+# Configure the interface connected to LAN 1.
+
+ ip address 192.168.1.1 255.255.255.0
+# Assign the default gateway IP for LAN 1.
+
+ no shutdown
+# Enable the interface.
+
+exit
+# Return to Global Configuration mode.
+
+interface gigabitEthernet 0/0
+# Configure the interface connected to LAN 2.
+
+ ip address 192.168.2.1 255.255.255.0
+# Assign the default gateway IP for LAN 2.
+
+ no shutdown
+# Enable the interface.
+
+exit
+# Return to Global Configuration mode.
+
+end
+# Exit Configuration mode.
+
+copy running-config startup-config
+# Save the running configuration to NVRAM so it persists
+# after a reboot.
+
+
+# NOTE: Complete the basic network configuration and verify connectivity
+# before proceeding with the TFTP backup section.
+
+==================================================
+TFTP Backup
+==================================================
+
+copy running-config tftp
+# Copy the current running configuration to the TFTP server.
+
+Address or name of remote host []? 192.168.2.20
+# Enter the IP address of the TFTP server.
+
+Destination filename [R1-confg]? R1-CONFIG
+# Specify the filename that will be stored on the TFTP server.
+
+==================================================
+Flash (IOS) Backup
+==================================================
+
+dir flash:
+# Display the contents of the router's flash memory.
+# Verify the Cisco IOS image filename before backing it up.
+
+copy flash: tftp
+# Copy the Cisco IOS image stored in flash memory to the TFTP server.
+
+Source filename []? c1900-universalk9-mz.SPA.151-4.M4.bin
+# Enter the IOS image filename exactly as shown by 'dir flash:'.
+
+Address or name of remote host []? 192.168.2.20
+# Enter the IP address of the TFTP server.
+
+Destination filename [c1900-universalk9-mz.SPA.151-4.M4.bin]? R1-IOS.bin
+# Store the IOS image using a descriptive filename.
+
+# The router IOS image has been successfully backed up
+# to the TFTP server.
