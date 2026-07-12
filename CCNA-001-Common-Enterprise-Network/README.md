@@ -188,16 +188,22 @@ CCNA-001-Common-Enterprise-Network
 │   └── common-enterprise-topology.pkt
 │
 ├── configs
-│   ├── router.txt
-│   ├── switch1.txt
-│   └── switch2.txt
+│   ├── R1.txt
+│   ├── SW1.txt
+│   ├── SW2.txt
+│   └── GENERAL-GUIDE.md
 │
 └── screenshots
-    ├── topology.png
-    ├── dhcp-test.png
-    ├── dns-test.png
-    ├── web-server.png
-    └── tftp-backup.png
+    ├── TOPOLOGY.png
+    ├── DHCP-TEST.png
+    ├── DNS-TEST.png
+    ├── ROUTING-TABLE.png
+    ├── ROUTER-VERIFICATION.png
+    ├── SWITCHES-INTERFACES.png
+    ├── PING-TEST.png
+    ├── DHCP-CONFIGURATION.png
+    ├── WEB-TEST.png
+    └── TFTP-BACKUP.png
 
 
 
