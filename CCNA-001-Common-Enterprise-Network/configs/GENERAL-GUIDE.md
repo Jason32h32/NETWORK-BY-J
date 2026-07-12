@@ -1,6 +1,6 @@
 # Topology
 
-![Network Topology](screenshoots/TOPOLOGY.png)
+![Network Topology](screenshots/TOPOLOGY.png)
 
 This project simulates a small enterprise network consisting of two LANs connected by a Cisco router. The topology includes network infrastructure devices, servers, wireless clients, and essential network services such as DHCP, DNS, Web, and TFTP.
 
@@ -102,7 +102,7 @@ IP Address
 192.168.1.254
 ```
 
-![DHCP Configuration](screenshoots/DHCP-CONFIGURATION.png)
+![DHCP Configuration](screenshots/DHCP-CONFIGURATION.png)
 
 The DHCP server automatically assigns IP addresses to client devices.
 
