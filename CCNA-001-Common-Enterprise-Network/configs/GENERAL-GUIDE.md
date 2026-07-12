@@ -1,6 +1,6 @@
 # Topology
 
-![Network Topology](screenshots/TOPOLOGY.png)
+![Network Topology](../screenshots/TOPOLOGY.png)
 
 This project simulates a small enterprise network consisting of two LANs connected by a Cisco router. The topology includes network infrastructure devices, servers, wireless clients, and essential network services such as DHCP, DNS, Web, and TFTP.
 
@@ -102,7 +102,7 @@ IP Address
 192.168.1.254
 ```
 
-![DHCP Configuration](screenshots/DHCP-CONFIGURATION.png)
+![DHCP Configuration](../screenshots/DHCP-CONFIGURATION.png)
 
 The DHCP server automatically assigns IP addresses to client devices.
 
@@ -140,9 +140,9 @@ DNS Record:
 
 | Domain Name | Record Type | IP Address |
 |-------------|-------------|------------|
-| dns-trial.com | A | 192.168.2.30 |
+| DNS-TRIAL.com | A | 192.168.2.30 |
 
-When users access **dns-trial.com**, the DNS server resolves the domain name to the Web Server's IP address.
+When users access **DNS-TRIAL.com**, the DNS server resolves the domain name to the Web Server's IP address.
 
 ---
 
@@ -183,7 +183,7 @@ http://192.168.2.30
 or
 
 ```text
-http://dns-trial.com
+http://DNS-TRIAL.com
 ```
 
 after successful DNS resolution.
